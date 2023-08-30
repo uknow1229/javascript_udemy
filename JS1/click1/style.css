@@ -1,0 +1,227 @@
+body {
+    font-family: serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon i {
+    color: green;
+    font-size: 30px;
+}
+
+.home {
+    display: flex;
+    color: dimgrey;
+}
+
+.home-text {
+    font-size: 22px;
+}
+
+.home i {
+    font-size: 21px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.messages {
+    display: flex;
+    color: dimgrey;
+}
+
+.messages-text {
+    font-size: 22px;
+}
+
+.messages i {
+    font-size: 21px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.profile {
+    display: flex;
+    color: dimgrey;
+}
+
+.profile-text {
+    font-size: 22px;
+}
+
+.profile i {
+    font-size: 21px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.button {
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 130px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* 投稿ボタンをクリックした時に表示されるダイアログのCSS - ここから */
+
+.popup-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.popup-box {
+    width: 500px;
+    height: 250px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup-close-button i {
+    font-size: 25px;
+    color: grey;
+}
+
+.popup-profile-wrap {
+    position: absolute;
+    top: 40px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.popup-profile-wrap .popup-profile-img img {
+    width: 75px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.popup-profile-textarea {
+    width: 100%
+}
+
+.input-textarea {
+    width: 100%;
+    font-size: 18px;
+    resize: none;
+    border: none;
+    background-color: white;
+}
+
+.input-textarea:focus {
+    outline: none;
+    color: grey;
+}
+
+.popup-bottom-wrap {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.popup-icon-wrap .popup-icon-media i {
+    font-size: 20px;
+    color: green;
+    margin-right: 10px;
+}
+
+.popup-icon-wrap .popup-icon-graph i {
+    font-size: 20px;
+    color: green;
+    margin-right: 10px;
+}
+
+.popup-icon-wrap .popup-icon-emoji i {
+    font-size: 20px;
+    color: green;
+}
+
+.popup-button {
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+/* 投稿ボタンをクリックした時に表示されるダイアログのCSS - おわり */
+
+@media (max-width: 1300px) {
+    .container {
+        width: 80%
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .icon {
+        margin-bottom: 20px;
+    }
+
+    .home {
+        margin-bottom: 20px;
+    }
+
+    .messages {
+        margin-bottom: 20px;
+    }
+
+    .profile {
+        margin-bottom: 20px;
+    }
+
+    .popup-box {
+        width: 400px;
+        height: 250px;
+    }
+}

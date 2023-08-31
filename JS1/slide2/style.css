@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.slideshow-container {
+  display: flex;
+  position: relative;
+  width: 500px;
+  overflow: hidden;
+}
+
+.slideshow-container img {
+  width: 500px;
+  object-fit: cover;
+  display: none;
+  transform: translateX(500px);
+}
+
+.slideshow-container img.active {
+  display: block;
+  animation: genki 6s linear;
+}
+
+@keyframes genki {
+  0% {
+    transform: translateX(500px);
+  }
+
+  20% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.circle-sign-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.circle-sign {
+  width: 15px;
+  height: 15px;
+  background-color: lightgrey;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.circle-sign.active {
+  background-color: cadetblue;
+}
